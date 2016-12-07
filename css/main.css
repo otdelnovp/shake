@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	line-height: 10px;
+	font-size: 10px;
+	background: #fff;
+}
+
+.wrapper {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.link {
+	display: none;
+	position: absolute;
+	z-index: 22;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.bg {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000 url(../img/bg.jpg) no-repeat center;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+}
+
+.bg_beach {
+	z-index: 2;
+	background-image: url(../img/bg_beach.jpg);
+	opacity: 0;
+}
+
+.move {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	bottom: 6%;
+	left: 0;
+	width: 100%;
+	height: 6.25%;
+	background: url(../img/move.png) no-repeat center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	opacity: 1;
+}
+
+.snow {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 21%;
+	left: 0;
+	width: 100%;
+	height: 34%;
+	mix-blend-mode: screen;
+	background: url(../img/snow.png) no-repeat center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	opacity: 0;
+}
+
+.logo {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 33.75%;
+	background: url(../img/logo.png) no-repeat 51% 0;
+	-webkit-background-size: contain;
+	background-size: contain;
+	opacity: 0;
+}
+
+.title {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 31.3%;
+	left: 0;
+	width: 100%;
+	height: 21.25%;
+	background: url(../img/title.png) no-repeat center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	opacity: 0;
+}
+
+.text {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	bottom: 1.8%;
+	left: 0;
+	width: 100%;
+	height: 30%;
+	background: url(../img/text.png) no-repeat center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	opacity: 0;
+}
+
+.button {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	bottom: 3.75%;
+	left: 0;
+	width: 100%;
+	height: 10.6%;
+	background: url(../img/button.png) no-repeat center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	opacity: 0;
+}
+
+.info {
+	display: block;
+	position: absolute;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff url(../img/info.jpg) no-repeat center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	outline: 3px solid #000;
+	outline-offset: -3px;
+	opacity: 0;
+}
+
+/**/
+
+.action .link {
+	display: block;
+}
+
+.action .move {
+	animation: fade_out 1s forwards;
+}
+
+.action .snow {
+	animation: snow 3s forwards;
+	animation-delay: 0.2s;
+}
+
+.action .bg_beach {
+	animation: beach 3s forwards;
+	animation-delay: 3s;
+}
+
+.action .logo {
+	animation: fade_in 1s forwards;
+	animation-delay: 6.5s;
+}
+
+.action .title {
+	animation: fade_in 1s forwards;
+	animation-delay: 6s;
+}
+
+.action .text {
+	animation: text 6s forwards;
+	animation-delay: 6.5s;
+}
+
+.action .button {
+	animation: fade_in 1s forwards;
+	animation-delay: 12s;
+}
+
+.action .info {
+	animation: fade_in 1s forwards;
+	animation-delay: 15s;
+}
+
+/**/
+
+@keyframes fade_in {
+	0%   {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes fade_out {
+	0%   {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes snow {
+	10%  {transform:translate(10px,0); opacity: 1;}
+	30%  {transform:translate(-10px,15px);}
+	50%  {transform:translate(10px,5px);}
+	75%  {transform:translate(0,-10px); opacity: 1;}
+	100% {transform:translate(5px,0px); opacity: 0;}
+}
+
+@keyframes beach {
+	20%, 90%  {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes text {
+	20%, 90%  {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+/**/
+
+@media screen and (orientation:landscape) {
+	/**/
+}
